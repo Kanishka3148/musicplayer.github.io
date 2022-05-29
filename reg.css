@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    list-style-type: none;
+    height: 65px;
+    width: 100%;
+    background-color: #694E4E;
+    color: rgb(255, 227, 227);
+}
+
+nav ul li {
+    padding: 0 12px;
+    cursor: pointer;
+    font-family: 'Salsa', cursive;
+    /* position: sticky; */
+}
+
+nav ul a:hover {
+    color: white;
+    text-shadow: #111;
+}
+
+nav ul a:hover {
+    color: white;
+    text-shadow: #111;
+}
+
+nav a {
+    padding: 0 12px;
+    cursor: pointer;
+    font-family: 'Salsa', cursive;
+    text-decoration: none;
+    color: rgb(255, 227, 227);
+}
+
+.brand img {
+    width: 40px;
+    border-radius: 50%;
+    padding: 0 6px;
+}
+
+.brand {
+    display: flex;
+    font-family: 'Salsa', cursive;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+/* body {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #f3c5c5, #694e4e);
+} */
+
+.container #xyz {
+    text-align: center;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #f3c5c5, #694e4e);
+    max-width: 700px;
+    width: 100%;
+    background: #ffff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/* .container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #694e4e;
+} */
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+form .user-details .input-box details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+form .user-details .input-box input:focus,
+form .user-details .input-box input:valid {
+    border-color: #694e4e;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .gender-details .category label {
+    display: flex;
+    align-items: center;
+}
+
+form .gender-details .dot {
+    height: 18px;
+    width: 18px;
+    background: #694e4e;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+
+#dot-1:checked~.category .one,
+#dot-2:checked~.category .two,
+#dot-3:checked~.category .three {
+    border-color: #694e4e;
+    background: #f3c5c5;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #f3c5c5, #694e4e);
+}
+
+form .button input:hover {
+    background: linear-gradient(135deg, #f3c5c5, #694e4e);
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category {
+        width: 100%;
+    }
+    .container form .user-details {
+        max-height: 300px;
+        ;
+        overflow: scroll;
+    }
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+}

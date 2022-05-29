@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Jost:wght@200&family=Montserrat&family=Salsa&display=swap');
+        body {
+            background-color: #C1A3A3;
+            font-family: 'Salsa', cursive;
+        }
+        
+        .main_Cont {
+            margin: auto;
+            padding: 50px 0px;
+            width: 40rem;
+            height: 52rem;
+            background-color: #F3C5C5;
+            border-radius: 1rem;
+            box-shadow: 0 1.2rem 2rem 0.5rem rgba(0, 0, 0, 0.2);
+            padding: 5rem;
+        }
+        
+        suggestions form {
+            width: 400px;
+            border-radius: 200rem;
+            padding: 20px;
+        }
+        
+        input,
+        textarea {
+            padding: 12px;
+            margin: 6px 6px 6px 12px;
+        }
+        
+        input[type=submit] {
+            background-color: #F3c5c5;
+            color: black;
+            padding: 12px 20px;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+        
+        input[type=reset] {
+            background-color: #926d6d;
+            border-radius: 2rem;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: darkgreen;
+            color: lightblue;
+        }
+        
+        input[type=reset]:hover {
+            background-color: red;
+            color: black;
+        }
+        
+        #text {
+            background-color: #edbaba;
+            border-radius: 1rem;
+        }
+        
+        #name {
+            border-radius: 0.5rem;
+            background-color: #edbaba;
+        }
+        
+        #artist {
+            border-radius: 0.5rem;
+            background-color: #edbaba;
+        }
+        
+        #gender {
+            color: aqua;
+        }
+        
+        .Dropdown-menu {
+            display: block;
+            /* margin: 10px; */
+        }
+        
+        #genre {
+            background-color: #ffe6e6;
+        }
+        
+        #rad {
+            background-color: #ffe6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="vibe">Vibe</li>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="about.html">About</a></li>
+            <li>
+                <a href="registeration.html">Registration</a></li>
+            <li>
+                <a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center">Feedback Form-Vibe with Beats</h1>
+    <div class="main_Cont">
+        <form class="f " action="" method="POST" style="text-align: left">
+            <p style="text-align: left">How is your experience after using the Website?</p>
+            <label for="fullName">1. Name</label> <br>
+            <input id="name" type="text" name="fullName"><br><br>
+
+            <label for="gender">2. Rate us</label> <br><br>
+            <input type="radio" name="rating" value="exe" id="rad">Excellent<br>
+            <input type="radio" name="rating" value="good" id="rad">Good<br>
+            <input type="radio" name="rating" value="fair" id="rad">Fair<br>
+            <input type="radio" name="rating" value="notsatis" id="rad">Not Satisfactory<br><br>
+
+
+
+            <label for="suggestions">3. Your Suggestions</label> <br>
+            <textarea id="text" name="suggestions"></textarea><br><br>
+
+            <div class="Dropdown-menu">
+                <label for="genre" style="text-align: left">4. Select genre of songs you wish to add</label>
+                <select name="genre" id="genre">
+      <option>Rock</option>
+      <option>Pop</option>
+      <option>Jazz</option>
+      <option>Lo-Fi</option>
+      <option>Indie</option>
+      <option>Edm</option>
+    </select>
+            </div>
+            <br>
+
+            <p>5. Enter the names of artists you would like us to feature</p>
+            <input id="artist" type="text" name="fullName"><br><br>
+
+            <label for="suggestions">5. How was your experience with our Website?</label> <br>
+            <textarea id="text" name="suggestions"></textarea><br><br>
+
+
+            <label for="suggestions">6. How can we make our page better</label> <br>
+            <textarea id="text" name="suggestions"></textarea><br><br>
+
+            <input type="submit" id="submitBtn" />
+            <script>
+                document.getElementById("submitBtn").addEventListener("click", myFunction);
+
+                function myFunction() {
+                    window.location.href = "index.html";
+                    alert("Thank you for the feedback");
+                }
+            </script>
+            <input type="reset" value="clear">
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe with beats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="vibe">Vibe</li>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="about.html">About</a></li>
+            <li>
+                <a href="registeration.html">Registration</a></li>
+            <li>
+                <a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="main_div">
+        <div class="music_container">
+            <h2 id="title">Both of us</h2>
+            <h3 id="artist">Beat1</h3>
+            <div class="img_container">
+                <img class="rotate" src="images/this_feeling.jpg" alt="logo1">
+            </div>
+            <audio src="music/both-of-us.mp3"></audio>
+            <div class="music_controls">
+                <i class="fas fa-backward" id="backward" title="Previous"></i>
+                <i class="fas fa-play main_button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="forward" title="Next"></i>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
