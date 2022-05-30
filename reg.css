@@ -6,75 +6,16 @@
     font-family: 'Salsa', cursive;
 }
 
-nav ul {
+body {
     display: flex;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    list-style-type: none;
-    height: 65px;
-    width: 100%;
-    background-color: #694E4E;
-    color: rgb(255, 227, 227);
-}
-
-nav ul li {
-    padding: 0 12px;
-    cursor: pointer;
-    font-family: 'Salsa', cursive;
-    /* position: sticky; */
-}
-
-nav ul a:hover {
-    color: white;
-    text-shadow: #111;
-}
-
-nav ul a:hover {
-    color: white;
-    text-shadow: #111;
-}
-
-nav a {
-    padding: 0 12px;
-    cursor: pointer;
-    font-family: 'Salsa', cursive;
-    text-decoration: none;
-    color: rgb(255, 227, 227);
-}
-
-.brand img {
-    width: 40px;
-    border-radius: 50%;
-    padding: 0 6px;
-}
-
-.brand {
-    display: flex;
-    font-family: 'Salsa', cursive;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
-    color: white;
-}
-
-
-/* body {
+    height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
     background: linear-gradient(135deg, #f3c5c5, #694e4e);
-} */
-
-.container #xyz {
-    text-align: center;
 }
 
 .container {
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg, #f3c5c5, #694e4e);
     max-width: 700px;
     width: 100%;
     background: #ffff;
@@ -88,8 +29,7 @@ nav a {
     position: relative;
 }
 
-
-/* .container .title::before {
+.container .title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -97,7 +37,7 @@ nav a {
     height: 3px;
     width: 30px;
     background: #694e4e;
-} */
+}
 
 .container form .user-details {
     display: flex;
@@ -191,6 +131,10 @@ form .button input {
 
 form .button input:hover {
     background: linear-gradient(135deg, #f3c5c5, #694e4e);
+}
+
+.button :hover {
+    cursor: pointer;
 }
 
 @media (max-width: 584px) {

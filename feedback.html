@@ -12,6 +12,10 @@
             font-family: 'Salsa', cursive;
         }
         
+        #heading {
+            padding: 20px 0px;
+        }
+        
         .main_Cont {
             margin: auto;
             padding: 50px 0px;
@@ -92,6 +96,8 @@
             background-color: #ffe6e6;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -107,9 +113,9 @@
                 <a href="feedback.html">Feedback</a></li>
         </ul>
     </nav>
-    <h1 style="text-align: center">Feedback Form-Vibe with Beats</h1>
+    <h1 style="text-align: center" id="heading">Feedback Form-Vibe with Beats</h1>
     <div class="main_Cont">
-        <form class="f " action="" method="POST" style="text-align: left">
+        <form class="f " name="feedback" action="" method="POST" style="text-align: left" onsubmit="return validateform()" method="post">
             <p style="text-align: left">How is your experience after using the Website?</p>
             <label for="fullName">1. Name</label> <br>
             <input id="name" type="text" name="fullName"><br><br>
@@ -127,7 +133,7 @@
 
             <div class="Dropdown-menu">
                 <label for="genre" style="text-align: left">4. Select genre of songs you wish to add</label>
-                <select name="genre" id="genre">
+                <select name="genre" id="genre" required>
       <option>Rock</option>
       <option>Pop</option>
       <option>Jazz</option>
@@ -141,21 +147,92 @@
             <p>5. Enter the names of artists you would like us to feature</p>
             <input id="artist" type="text" name="fullName"><br><br>
 
-            <label for="suggestions">5. How was your experience with our Website?</label> <br>
-            <textarea id="text" name="suggestions"></textarea><br><br>
+            <label for="suggestions">6. How was your experience with our Website?</label> <br>
+            <textarea id="text3" name="suggestions"></textarea><br><br>
 
 
-            <label for="suggestions">6. How can we make our page better</label> <br>
-            <textarea id="text" name="suggestions"></textarea><br><br>
+            <label for="suggestions">7. How can we make our page better</label> <br>
+            <textarea id="text4" name="suggestions"></textarea><br><br>
 
             <input type="submit" id="submitBtn" />
             <script>
-                document.getElementById("submitBtn").addEventListener("click", myFunction);
+                // function validateform()
+                //         {
+                //             var name = document.forms['feedback']["name"].value;
+                //             var text = document.forms['feedback']["text"].value;
+                //             var artist = document.forms['feedback']["artist"].value;
+                //             var text3= document.forms['feedback']["text3"].value;
+                //             var text4 = document.forms['feedback']["text4"].value;
+                //             console.log(name);
+                //             if (name ==null || name == "") {
+                //                 alert("Name Can't be Blank");
+                //                 return false;
+                //             }
+                //            else if (text ==null || text == "") {
+                //                 alert("This field Can't be Blank");
+                //                 return false;
+                //             }
+                //            else if (text3 ==null || text3 == "") {
+                //                 alert("This field Can't be Blank");
+                //                 return false;
+                //             }
+                //            else if (text4 ==null || text4 == "") {
+                //                 alert("This field Can't be Blank");
+                //                 return false;
+                //             }
+                //             else if (artist ==null || artist == "") {
+                //                 alert("This field Can't be Blank");
+                //                 return false;
+                //             }
+                //             else
+                //             {
+                //                 return true;
+                //             }
+                //         }
+                // let valid = false;
+                document.getElementById("submitBtn").addEventListener("click", validateform);
 
-                function myFunction() {
-                    window.location.href = "index.html";
-                    alert("Thank you for the feedback");
+                function validateform() {
+                    var name = document.feedback.name.value;
+                    var password = document.feedback.text.value;
+                    var artist = document.feedback.artist.value;
+                    var suggestions = document.feedback.text3.value;
+                    var text4 = document.feedback.text4.value;
+
+                    if (name == null || name == "") {
+                        alert("Name can't be blank");
+                        return false;
+                    } else if (password == null || password == "") {
+                        alert("Field 3 can't be blank");
+                        return false;
+                    } else if (artist == null || artist == "") {
+                        alert("Field 5 can't be blank");
+                        return false;
+                    } else if (suggestions == null || suggestions == "") {
+                        alert("Field 6 can't be blank");
+                        return false;
+                    } else if (text4 == null || text4 == "") {
+                        alert("Field 7 can't be blank");
+                        return false;
+                    } else {
+                        // document.getElementById("submitBtn").addEventListener("click", myFunction);
+
+                        // function myFunction() {
+                        //     window.location.href = "index.html";
+                        window.location.href = "index.html";
+                        alert("Thank you for the feedback");
+                        return true;
+
+                    }
                 }
+
+
+                // if (valid) {
+                //     function myFunction() {
+                //         window.location.href = "index.html";
+                //         alert("Thank you for the feedback");
+                //     }
+                // }
             </script>
             <input type="reset" value="clear">
         </form>

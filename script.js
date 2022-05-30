@@ -109,19 +109,22 @@ const loadsong = (songlist) => {
     title.textContent = songlist.title;
     artist.textContent = songlist.artist;
     music.src = "music/" + songlist.name + ".mp3";
+
 };
 
 songindex = 0;
 const nextSong = () => {
     songindex = (songindex + 1) % songlist.length;
     loadsong(songlist[songindex]);
-    playing = true;
+    // playing = true;
+    myRange.value = "0";
 };
 
 const prevSong = () => {
     songindex = (songindex - 1 + songlist.length) % songlist.length;
     loadsong(songlist[songindex]);
-    playing = true;
+    // playing = true;
+    myRange.value = "0";
 };
 
 forward.addEventListener("click", nextSong);
